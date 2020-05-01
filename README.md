@@ -1,4 +1,4 @@
-# # Docker部署hexo脚本
+# Docker部署hexo脚本
 
 
 
@@ -19,7 +19,7 @@ blog
 
 ```bash
 cd /home/blog
-git clone xxxxxxx
+git clone https://github.com/ylwnpzzn/docker-hexo.git
 ```
 
 2. 给shell脚本添加可执行权限
