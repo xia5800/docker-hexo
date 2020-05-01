@@ -25,7 +25,7 @@ git clone https://github.com/ylwnpzzn/docker-hexo.git
 2. 给shell脚本添加可执行权限
 
 ```bash
-chmo +a *.sh
+chmod +a *.sh
 ```
 
 3. 初始化
