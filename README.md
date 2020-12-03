@@ -1,7 +1,6 @@
 # Docker部署hexo脚本
 
 
-
 ## 目录说明
 
 ```bash
@@ -10,7 +9,6 @@ blog
 ├── source # 存放你的hexo博客的source文件夹下的内容
 └── themes # 存放你的hexo博客的themes的内容
 ```
-
 
 
 ## 食用方法：
@@ -68,8 +66,42 @@ chmod +a *.sh
 
 
 
-
-
 ## 修改你的配置
 
 如果你的hexo路径不在```/home/blog```下，则需要将```docker-compose.yml```文件内的```/home/blog/source```和```/home/blog/themes```修改成你的路径。
+
+
+
+## 以下插件已经安装过了
+
+```bash
+# stun主题
+git clone https://github.com/liuyib/hexo-theme-stun.git themes/stun
+npm install hexo-render-pug --save
+# 生成atom.xml 开启rss功能
+npm install hexo-generator-feed --save
+# 文章预计的阅读时间、文章字数统计
+npm install hexo-wordcount --save
+# 生成sitemap
+npm install hexo-generator-sitemap --save
+# 博客本地搜索功能
+npm install hexo-generator-search --save
+# Markdown emoji语法支持 与其他插件冲突，建议从http://emojihomepage.com/这个网站复制粘贴emoji
+# npm install hexo-filter-github-emojis --save
+# live2d动画支持
+npm install hexo-helper-live2d --save
+# 音视频播放插件
+npm install hexo-tag-mmedia --save
+# 图片插件
+npm install hexo-asset-image --save
+```
+
+## live2d模型库
+[https://github.com/xiazeyu/live2d-widget-models](https://github.com/xiazeyu/live2d-widget-models)
+
+
+## 配置文档
+
+- [hexo官方文档](https://hexo.io/zh-cn/docs/)
+- [hexo-theme-stun 配置文档](https://liuyib.github.io/hexo-theme-stun/zh-CN/guide/quick-start.html)
+- [hexo插件使用与配置](https://easyhexo.com/3-Plugins-use-and-config/)

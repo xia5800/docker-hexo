@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Hello Stun
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
-timezone: ''
+author: xia5800
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -93,9 +93,66 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-stun
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+# stun搜索功能
+search:
+  path: search.json
+  field: post
+  content: true
+
+# rss
+feed:
+  type: atom
+  # 这是 RSS 订阅的地址（可以随意设置，和上面 rss 配置项对应）
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+  icon: icon.png
+
+#live2d
+live2d:
+  enable: true
+  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/
+  # scriptFrom: jsdelivr
+  scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+  model:
+    #use: ./source/plug-in/live2d-shizuku  #模板目录，在plug-in里
+    use: https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
+  display:
+    position: left
+    width: 150 
+    height: 300
+  mobile:
+    show: false  #是否在手机进行显示
+
+# 媒体播放插件
+mmedia:
+  aplayer:
+    cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    style_cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    default:
+  meting:
+    cdn: https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js
+    api:
+    default:
+  dplayer:
+    cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+    style_cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
+    hls_cdn: https://cdn.jsdelivr.net/npm/hls.j/dist/hls.min.js
+    dash_cdn: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_cdn: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_cdn: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_cdn: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    default:

@@ -1,0 +1,20 @@
+[
+    {
+      "avatar": "https://placehold.it/100x100.jpg",
+      "name": "张三",
+      "introduction": "李四是大佬，李四是大佬，李四是大佬，李四是大佬，李四是大佬",
+      "url": "https://liuyib.github.io/"
+    },
+    {
+      "avatar": "https://placehold.it/100x100.jpg",
+      "name": "李四",
+      "introduction": "我不是大佬，我不是大佬，我不是大佬，我不是大佬，我不是大佬",
+      "url": "https://liuyib.github.io/"
+    },
+    {
+      "avatar": "https://placehold.it/100x100.jpg",
+      "name": "王五",
+      "introduction": "我是小白",
+      "url": "https://liuyib.github.io/"
+    }
+  ]
