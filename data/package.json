@@ -12,6 +12,8 @@
     "version": "5.4.0"
   },
   "dependencies": {
+    "pug": ">=3.0.1",
+    "node-fetch": ">=2.6.1",
     "hexo": "^5.0.0",
     "hexo-asset-image": "^1.0.0",
     "hexo-generator-archive": "^1.0.0",
