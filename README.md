@@ -17,7 +17,7 @@ blog
 
 ```bash
 cd /home/blog
-git clone https://github.com/ylwnpzzn/docker-hexo.git
+git clone https://github.com/xia5800/docker-hexo.git
 ```
 
 2. 给shell脚本添加可执行权限

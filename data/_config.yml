@@ -12,10 +12,9 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title.html
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://example.com
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -51,6 +50,11 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -76,8 +80,8 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -93,10 +97,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-stun
+theme: stun
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
 
@@ -132,27 +136,50 @@ live2d:
     use: https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
   display:
     position: left
-    width: 150 
+    width: 150
     height: 300
   mobile:
     show: false  #是否在手机进行显示
 
 # 媒体播放插件
 mmedia:
-  aplayer:
-    cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-    style_cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+  audio:
     default:
+  video:
+    default:
+  aplayer:
+    js: https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js
+    css: https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css
+    default:
+      contents:
   meting:
-    cdn: https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js
+    js: https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js
     api:
     default:
   dplayer:
-    cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    style_cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-    hls_cdn: https://cdn.jsdelivr.net/npm/hls.j/dist/hls.min.js
-    dash_cdn: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_cdn: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_cdn: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_cdn: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    js: https://cdn.jsdelivr.net/npm/dplayer@1/dist/DPlayer.min.js
+    hls_js: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
     default:
+      contents:
+  bilibili:
+    default:
+      page: 1
+      danmaku: true
+      allowfullscreen: allowfullscreen
+      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+      width: 100%
+      max_width: 850px
+      margin: auto
+  xigua:
+    default:
+      autoplay: false
+      startTime: 0
+      allowfullscreen: allowfullscreen
+      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+      width: 100%
+      max_width: 850px
+      margin: auto
