@@ -1,12 +1,16 @@
-version: '3'
+version: "3.9"
 services:
   hexo-blog:
+    build:
+      context: .
+      args:
+        NODE_VERSION: 14
     container_name: hexo-blog
     image: hexo-blog:latest
     restart: always
-    privileged: true
+    environment:
+      HEXO_SERVER_PORT: 4080
     ports:
-      - '8080:4000'
+      - '8080:4080'
     volumes:
-      - /home/blog/source:/root/blog/source
-      - /home/blog/themes:/root/blog/themes
+      - ./data/blog:/root/blog

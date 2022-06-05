@@ -1,4 +1,0 @@
----
-title: archives
-type: "archives"
----
