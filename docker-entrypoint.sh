@@ -11,9 +11,9 @@ if [ "`ls -A $WORKDIR`" = "" ]; then
     npm config set registry http://registry.npm.taobao.org/
     npm install
     # 插件安装写在这里
-    # npm install --save xxxxx \
-    #     xxxx \
-    #     xxxx \
+    npm install --save hexo-generator-searchdb \
+        hexo-word-counter \
+        hexo-generator-sitemap
     echo ">>>>>>>>>>> 安装Next主题"
     git clone https://github.com/next-theme/hexo-theme-next.git themes/next
     sed -i 's/theme: landscape/theme: next/g' _config.yml
@@ -26,4 +26,4 @@ hexo clean
 # 生成静态文件
 hexo generate
 # 启动服务器
-hexo server -p ${HEXO_SERVER_PORT}
+hexo server -p ${HEXO_SERVER_PORT} -s
