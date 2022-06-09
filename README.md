@@ -88,15 +88,15 @@ cd shell
 
 ## 以下插件已经安装过了
 
-已安装的插件(没装任何第三方插件) ,参考：[插件安装与配置](https://easyhexo.com/3-Plugins-use-and-config/)
+已安装的插件,参考：[插件安装与配置](https://easyhexo.com/3-Plugins-use-and-config/)
 
 ```bash
-# live2d动画支持
-# npm install hexo-helper-live2d --save
-# 音视频播放插件
-# npm install hexo-tag-mmedia --save
-# 图片插件
-# npm install hexo-asset-image --save
+# next主题本地搜索插件
+npm install hexo-generator-searchdb --save
+# 文章字数统计插件
+npm install hexo-word-counter --save
+# 生成sitemap插件
+npm install hexo-generator-sitemap --save
 ```
 
 已安装的主题
