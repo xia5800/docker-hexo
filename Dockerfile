@@ -4,6 +4,8 @@ FROM node:${NODE_VERSION}-alpine
 # 更新系统
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 RUN apk update && apk upgrade
+# 设置时区
+RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && apk del tzdata
 # 安装git、nano
 RUN apk add git nano
 # 配置淘宝镜像源

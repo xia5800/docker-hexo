@@ -1,4 +1,14 @@
 # 更新日志
+- 2022/07/27
+
+  修改Dockerfile文件，解决容器时区问题。
+  
+  还有另一种解决时区问题的方案，不推荐windows用户使用
+  ```yml
+    volumes:
+      - ./data/blog:/root/blog
+      - /etc/localtime:/etc/localtime  # 设置时区
+  ```
 
 - 2022/06/07
   
